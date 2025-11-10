@@ -63,6 +63,21 @@ public class Test2 {
 
 	}
 	*/
-	
+
+
+	/*
+	  A JFrame as the window,
+
+      A JLabel to show numbers (the display screen),
+
+      A JPanel to hold the label.
+
+	  JFrame → The main window.
+
+      JLabel → Displays the calculator’s output (“0” initially).
+
+      JPanel → A container that holds the label neatly.
+	*/
 	
 }
+
