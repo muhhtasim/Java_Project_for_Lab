@@ -1,16 +1,18 @@
-package kj;
 
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Arrays;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 public class Test4 {
 
@@ -85,6 +87,8 @@ public class Test4 {
 			button.setFont(new Font("Arial", Font.PLAIN, 30));
 			button.setText(buttonValue);
 			button.setFocusable(false);             //for hide the rectangle box after clicking the button
+			button.setBorder(new LineBorder(customBlack));     //for lineborder in 2button's chipped(black)
+			
 			
 			if (Arrays.asList(topSymbols).contains(buttonValue)) {         //topSymble array already created
 				button.setBackground(customLightGray);
@@ -102,6 +106,38 @@ public class Test4 {
 			
 			
 			buttonsPanel.add(button);
+			
+			
+			button.addActionListener( new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JButton button = (JButton) e.getSource();
+					String buttonValue = button.getText();
+					
+					if (Arrays.asList(rightSymbols).contains(buttonValue)) {
+						
+					}
+					
+					else if (Arrays.asList(topSymbols).contains(buttonValue)) {
+						
+					}
+					else {
+						
+						if (buttonValue == ".") {
+							
+						}
+						 else if ("0123456789".contains(buttonValue)) {
+							 if (displayLabel.getText() == "0") {
+	                                displayLabel.setText(buttonValue);
+	                            }
+	                            else {
+	                                displayLabel.setText(displayLabel.getText() + buttonValue);
+	                            }
+							 
+						 }
+					}
+					
+				}
+			});
 			
 			
 		}
