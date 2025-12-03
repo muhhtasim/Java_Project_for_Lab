@@ -244,7 +244,7 @@ public class Calculator {
 	/*  public class App {
 
 		public static void main(String[] args)  {
-	        Calculator  = new Calculator();
+	        Calculator calculator = new Calculator();
 
 		}
 
@@ -253,4 +253,5 @@ public class Calculator {
 	
 	
 }
+
 
